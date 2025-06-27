@@ -57,11 +57,6 @@ public class Vista extends javax.swing.JFrame {
 
         jTextField2.setEditable(true);
         jTextField2.setCursor(new java.awt.Cursor(java.awt.Cursor.E_RESIZE_CURSOR));
-        jTextField2.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                jTextField2PropertyChange(evt);
-            }
-        });
         jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextField2KeyPressed(evt);
@@ -312,10 +307,6 @@ public class Vista extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextField2PropertyChange
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2PropertyChange
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //this.jTextField2.setText("1");
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -404,10 +395,7 @@ public class Vista extends javax.swing.JFrame {
         }
         if (evt.getKeyCode() == KeyEvent.VK_C) {
             // Crear un ActionEvent y enviarlo manualmente al controlador
-            ActionEvent actionEvent = new ActionEvent(evt.getSource(), ActionEvent.ACTION_PERFORMED, "C");
-            for (ActionListener listener : jButton11.getActionListeners()) {
-                listener.actionPerformed(actionEvent);
-            }
+            jTextField2.setText("");
         }
     }//GEN-LAST:event_jTextField2KeyPressed
 
