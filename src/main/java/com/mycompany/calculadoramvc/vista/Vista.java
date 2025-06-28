@@ -4,6 +4,7 @@ package com.mycompany.calculadoramvc.vista;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyAdapter;
 
 /**
  *
@@ -384,7 +385,7 @@ public class Vista extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton22ActionPerformed
 
     private void jTextField2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyPressed
-        char key = evt.getKeyChar();
+        int key = evt.getKeyChar();
         
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             // Crear un ActionEvent y enviarlo manualmente al controlador
